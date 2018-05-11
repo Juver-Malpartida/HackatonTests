@@ -6,19 +6,20 @@ import javax.persistence.*;
 public class Events_event {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer Id;
+	private int Id;
 	private String title;
 	private String address;
 	
 	protected Events_event() {}
 	
-	public Integer getId() {
+	public int getId() {
 		return Id;
 	}
-	public void setId(Integer id) {
+
+	public void setId(int id) {
 		Id = id;
 	}
+
 	public String getTitle() {
 		return title;
 	}
