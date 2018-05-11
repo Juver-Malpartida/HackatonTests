@@ -1,0 +1,1 @@
+https://docs.spring.io/spring-data/jpa/docs/2.0.7.RELEASE/reference/html/
