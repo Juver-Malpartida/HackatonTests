@@ -32,12 +32,11 @@ public class DataBaseTests {
 	@Test
 	public void QueryPostgressDb() {
 		log.info("Arrange");
-		int eventId = 19;
-		Events_event event = eventRepository.findById(eventId).orElse(null);
+		Events_event event = eventRepository.findByIsUpcomingIsTrue();
 		
 		log.info("Act-Assert");
 		given()
-			.pathParam("eventId", eventId)
+			.pathParam("eventId", event.getId())
 		.when()
 			.get("https://bxevents.herokuapp.com:443/event/{eventId}/")
 		.then()
